@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>System Status</title>
+  <title><%= full_title(yield(:title)) %></title>
     <%= render 'layouts/stylesheets' %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>

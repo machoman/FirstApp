@@ -52,7 +52,7 @@
 
 <p>
   <b>Created by:</b>
-  <%= @status_report.created_by %>
+  <%= User.find(@status_report.created_by).name %>
 </p>
 
 <p>

@@ -56,7 +56,7 @@
   </div>
   <div class="field">
     <%= f.label :created_by %><br />
-    <%= f.text_field :created_by %>
+	  <%= f.select :created_by, User.all.collect {|p| [p.name, p.id] }, :prompt => 'Select a user' %>
   </div>
   <div class="actions">
     <%= f.submit %>

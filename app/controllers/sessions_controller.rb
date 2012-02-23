@@ -1,4 +1,8 @@
 class SessionsController < ApplicationController
+  def sign_in(user)
+    cookies.permanent[:remember_token] = user.remember_token
+    current_user = user
+  end
 
   def new
   end
@@ -7,14 +11,16 @@ class SessionsController < ApplicationController
     user = User.find_by_email(params[:session][:email])
     if user && user.authenticate(params[:session][:password])
       sign_in user
-      redirect_to user
+      redirect_back_or user
     else
-      flash[:error] = 'Invalid email/password combination' # Not quite right!
+      flash.now[:error] = 'Invalid email/password combination'
       render 'new'
     end
   end
 
   def destroy
+    sign_out
+    redirect_to root_path
   end
 end
 
