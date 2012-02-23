@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  outage_type_id: 1
+  date: MyString
+  start_time: 1
+  end_time: 1
+  affected_groups: MyString
+  affected_services: MyString
+  description: MyText
+  scheduled: false
+  active: false
+  created_by: MyString
+
+two:
+  name: MyString
+  outage_type_id: 1
+  date: MyString
+  start_time: 1
+  end_time: 1
+  affected_groups: MyString
+  affected_services: MyString
+  description: MyText
+  scheduled: false
+  active: false
+  created_by: MyString
